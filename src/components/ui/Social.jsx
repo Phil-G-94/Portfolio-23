@@ -1,6 +1,6 @@
 export default function Social() {
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-row">
             <a
                 href="https://www.linkedin.com/in/phil-georgiou/"
                 target="_blank"

@@ -23,17 +23,18 @@ export default function Typewriter() {
 
             setText((prev) => prev + heroText[i]);
         }, 40);
-    }, [animStarted, setAnimStarted]);
+    }, [text, animStarted, setAnimStarted]);
 
     useEffect(() => {
         return () => {
             setAnimStarted(false);
             clearInterval(timer);
+            setText("");
         };
     }, []);
 
     return (
-        <div className="m-16 flex md:justify-center sm:justify-center space-x-1 ">
+        <div className="flex md:justify-center sm:justify-center space-x-1">
             <div className="max-w-2xl text-left">{!text ? "" : text}</div>
         </div>
     );
